@@ -1,0 +1,227 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  letter-spacing: 0px;
+}
+
+body {
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 500px;
+  height: 300px;
+  background: #f1f1f1;
+  margin: 100px auto 0;
+  word-break: break-all;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.bloc-tabs {
+  display: flex;
+}
+.tabs {
+
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+  background: rgba(128, 128, 128, 0.075);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+.tabs:not(:last-child){
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.active-tabs  {
+  background: white;
+  border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+  background: rgb(88, 147, 241);
+}
+
+
+
+button {
+  border: none;
+  
+}
+
+.add-button:hover{
+  background-color: rgb(0, 167, 0);
+  cursor: pointer;
+}
+
+.content-tabs {
+  flex-grow : 1;
+}
+.content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.content p {
+  width: 100%;
+  height: 100%;
+}
+.active-content {
+  display: block;
+}
+
+.navigation{
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.navigation button{
+  padding: 8px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.navigation button:hover{
+  background-color: rgb(0, 167, 0);
+  cursor: pointer;
+}
+
+
+.vertical-modal .modal-dialog {
+  height: 80vh;
+  max-height: 80vh;
+}
+
+.vertical-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.vertical-modal .modal-body {
+  padding: 20px;
+}
+
+.vertical-modal .modal-footer{
+  width: 100% !important;
+  border: 2px solid black;
+}
+
+.main-div input{
+  width: 480px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.add-button{
+  padding: 5px;
+  width: 60px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  margin-left: 5px;
+  font-size: 10px;
+}
+
+.main-div{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* .left-div{
+  width: 50%;
+}
+
+.right-div{
+  width: 42%;
+} */
+
+.custom-modal-content{
+  max-width: 80% !important;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: green;
+  border-color: green;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: white;
+}
+
+.generator{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.generator-button{
+  font-size: 10px;
+  background-color: green;
+  padding: 8px;
+  color: white;
+  border-radius: 5px;
+}
+
+h6{
+  color: green !important;
+  font-size: 20px !important;
+}
+
+/* @media screen and (max-width: 687px) {
+  
+  .main-div input{
+    width: 200px !important;
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+} */
+
+
+.first{
+  display: flex;
+  width: 80% !important;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+
+.first button{
+    border-radius: 30px;
+    width: 50px;
+    background-color: green;
+    padding: 12px;
+}
